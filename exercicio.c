@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <locale.h>
 
 void verSaldo(float saldo) {
     return printf("Seu saldo é: R$ %.2f", saldo);
@@ -10,11 +9,17 @@ void fazerDeposito(float saldo, float dep) {
     printf("\nR$ ");
     scanf("%f", &dep);
     saldo = saldo + dep;
-    printf("Saldo depositado.");   
+
+    return printf("Saldo de R$%.2f depositado com sucesso.", dep);   
 }
 
-void fazerSaque() {
+void fazerSaque(float saldo, float saque) {
+    printf("Quando você quer sacar?");
+    printf("\nR$ ");
+    scanf("%f", &saque);
+    saldo = saldo - saque;
 
+    return printf("Valor de R$ %.2f sacado com sucesso.", saque);
 }
 
 
@@ -34,6 +39,7 @@ int main () {
         // FAZER DEPOSITO
     } else if (opc == 3) {
         // FAZER SAQUE
+        fazerSaque(saldo, saque);
     } else {
         printf("Comando inválido.");
     }
