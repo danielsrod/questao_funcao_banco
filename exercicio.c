@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 float verSaldo(float saldo) {
+    
     return printf("Seu saldo eh: R$ %.2f", saldo);
 }
 
@@ -21,7 +22,6 @@ float fazerSaque(float saldo, float saque) {
 
     return saldo - saque; 
 }
-
 
 int main () {
     float saldo = 1000, dep = 0, saque = 0;
@@ -53,9 +53,6 @@ int main () {
     scanf("%d", &cont);
 
     } while (cont == 1);
-
-    
-    
 
     return 0;
     //printf("\nSALVE MUNDO!\n\n");
